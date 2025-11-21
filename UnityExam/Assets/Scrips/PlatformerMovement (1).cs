@@ -50,7 +50,7 @@ public class PlatformerMovement : MonoBehaviour
     {
         velocity = TranslateInputToVelocity(moveInput);
         
-        if(moveInput.x != 0) animator.SetBool("isWalking", true);
+        if(moveInput.x != 0 && !animator.GetBool("isWalking")) animator.SetBool("isWalking", true);
         else if(moveInput.x == 0) animator.SetBool("isWalking", false);
         
         // Apply jump-input:
@@ -153,7 +153,6 @@ public class PlatformerMovement : MonoBehaviour
     // This method can be triggered through the UnityEvent in PlayerInput
     public void OnMove(InputAction.CallbackContext context)
     {
-        
         
         if (controlEnabled)
         {
