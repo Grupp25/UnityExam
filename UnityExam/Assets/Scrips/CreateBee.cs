@@ -13,4 +13,9 @@ public class CreateBee : MonoBehaviour
     {
         
     }
+
+    void FixedUpdate()
+    {
+        
+    }
 }
