@@ -17,9 +17,13 @@ public class LoadLevel2 : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && SceneManager.GetActiveScene().buildIndex == 1)
         {
             SceneManager.LoadScene("Level2", LoadSceneMode.Single);
+        }
+        if (other.tag == "Player" && SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            SceneManager.LoadScene("Level1", LoadSceneMode.Single);
         }
     }
 }
