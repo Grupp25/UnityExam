@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
             /////////////// INFORMATION ///////////////
 // This script automatically adds a Rigidbody2D, CapsuleCollider2D and CircleCollider2D component in the inspector.
@@ -180,6 +181,14 @@ public class PlatformerMovement : MonoBehaviour
         {
             jumpReleased = true;
             jumpInput = false;
+        }
+    }
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Enemy")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
