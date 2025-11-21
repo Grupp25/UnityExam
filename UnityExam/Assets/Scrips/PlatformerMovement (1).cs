@@ -190,5 +190,10 @@ public class PlatformerMovement : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+
+        if (other.tag == "Coin")
+        {
+            
+        }
     }
 }
