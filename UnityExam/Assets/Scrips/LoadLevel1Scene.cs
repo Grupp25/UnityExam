@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadScene : MonoBehaviour
+public class LoadLevel1Scene : MonoBehaviour
 {
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -16,7 +16,7 @@ public class LoadScene : MonoBehaviour
         
     }
 
-    public void LoadLevel1Scene()
+    public void LoadLevel1()
     {
         SceneManager.LoadScene("Level1", LoadSceneMode.Single);
     }
