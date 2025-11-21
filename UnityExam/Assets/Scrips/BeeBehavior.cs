@@ -15,5 +15,10 @@ public class BeeBehavior : MonoBehaviour
     void Update()
     {
         gameObject.transform.Translate(-moveSpeed * Time.deltaTime, 0, 0);
+
+        if (gameObject.transform.position.x == -12.0f)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
